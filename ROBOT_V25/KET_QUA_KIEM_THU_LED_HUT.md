@@ -1,4 +1,4 @@
-# Kiểm tra V25_FIX_M2_LED — LED hút D50 + D52
+# Kiểm tra V25 — LED hút D50 + D52
 
 ## Phạm vi thay đổi
 1. Định nghĩa `SUCTION_LED1=50`, `SUCTION_LED2=52`, active HIGH.

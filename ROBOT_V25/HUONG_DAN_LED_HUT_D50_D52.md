@@ -1,4 +1,4 @@
-# ROBOT V25_FIX_M2_LED — 2 đèn báo hút D50 và D52
+# ROBOT V25 — 2 đèn báo hút D50 và D52
 
 ## Chức năng
 
