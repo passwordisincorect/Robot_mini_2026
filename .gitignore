@@ -1,0 +1,28 @@
+# Arduino / PlatformIO outputs
+build/
+_build/
+.pio/
+*.elf
+*.hex
+*.eep
+*.map
+*.o
+*.a
+*.d
+*.bin
+
+# Logs and transient test artifacts
+verification/
+*.log
+*.out
+*.err
+__pycache__/
+*.pyc
+*.exe
+
+# Local environments
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
