@@ -1,5 +1,19 @@
 # Robot_mini_2026
 
+**Phiên bản hiện tại: [V26 — HWT901B UART + PID giữ hướng](ROBOT_V26/README_V26.md).**
+
+Mega nhận nguyên khung góc WIT 11 byte từ STM32 qua D15/RX3 ở 115200 baud, kiểm checksum và PID giữ yaw với xử lý vòng ±180°. D-pad trái/phải trượt, R1 bấm bật/tắt hút, vuông/X bấm một lần tới hành trình; L1/L2/R2 trống, tốc độ đặt PWM255.
+
+- [Sketch Arduino Mega V26](ROBOT_V26/MEGA_PS3_UART_V26/MEGA_PS3_UART_V26.ino)
+- [Hướng dẫn đấu UART và PID](ROBOT_V26/HUONG_DAN_HWT901B.md)
+- [Báo cáo kiểm chứng V26](ROBOT_V26/KET_QUA_HWT901B_20261107.md): 80/80 nhóm giả lập PASS, Arduino Mega 2560 compile PASS.
+
+Chưa nạp/thử robot; cần xác nhận dấu yaw và hiệu chỉnh PID theo phần cứng. V25 được giữ làm bản trước để đối chiếu/hoàn tác. File HEX, log và chương trình test sinh ra không được đưa lên GitHub theo `.gitignore` hiện có.
+
+---
+
+## Tài liệu V25 — bản trước
+
 Firmware điều khiển **robot 4 bánh mecanum** dùng **Arduino Mega 2560** (động cơ, cơ cấu, bơm/van, MPU6050) và **ESP32-WROOM-32** (nhận tay cầm PS3 qua Bluepad32 rồi gửi dữ liệu UART2 cho Mega).
 
 **Phiên bản trong repository:** [V25](ROBOT_V25/) — sửa chiều bánh M2, giữ điều khiển PID giữ hướng V25 và phanh V24, bổ sung hai LED báo **lệnh hút** ở Mega D50/D52. Chưa xác minh hoạt động trên robot thật.
