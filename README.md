@@ -1,14 +1,14 @@
 # Robot_mini_2026
 
-**Phiên bản hiện tại: [V26 — HWT901B UART + PID giữ hướng](ROBOT_V26/README_V26.md).**
+**Phiên bản hiện tại: [V26.1](ROBOT_V26_1/README_V26_1.md).**
 
-Mega nhận nguyên khung góc WIT 11 byte từ STM32 qua D15/RX3 ở 115200 baud, kiểm checksum và PID giữ yaw với xử lý vòng ±180°. D-pad trái/phải trượt, R1 bấm bật/tắt hút, vuông/X bấm một lần tới hành trình; L1/L2/R2 trống, tốc độ đặt PWM255.
+- D-pad lên/xuống: giữ để nâng/hạ cơ cấu, thả dừng; hủy lệnh tự động đang chạy. D-pad trái/phải vẫn trượt cơ cấu.
+- Xoay còn 70% (PWM179/255). Đi ngang trái/phải thêm bù tiến ban đầu 3% để giảm trôi về đuôi khi đầu giữ nguyên hướng.
+- Vuông/X vẫn bấm một lần tới hành trình; R1 bật/tắt hút. Giao thức yaw HWT901B qua STM32, PID, R3 và timeout PS3 giữ như V26.
 
-- [Sketch Arduino Mega V26](ROBOT_V26/MEGA_PS3_UART_V26/MEGA_PS3_UART_V26.ino)
-- [Hướng dẫn đấu UART và PID](ROBOT_V26/HUONG_DAN_HWT901B.md)
-- [Báo cáo kiểm chứng V26](ROBOT_V26/KET_QUA_HWT901B_20261107.md): 80/80 nhóm giả lập PASS, Arduino Mega 2560 compile PASS.
+[Sketch Mega V26.1](ROBOT_V26_1/MEGA_PS3_UART_V26_1/MEGA_PS3_UART_V26_1.ino) · [Hướng dẫn UART/PID](ROBOT_V26_1/HUONG_DAN_HWT901B.md) · [Báo cáo kiểm thử](ROBOT_V26_1/KET_QUA_V26_1_20261107.md).
 
-Chưa nạp/thử robot; cần xác nhận dấu yaw và hiệu chỉnh PID theo phần cứng. V25 được giữ làm bản trước để đối chiếu/hoàn tác. File HEX, log và chương trình test sinh ra không được đưa lên GitHub theo `.gitignore` hiện có.
+Mức bù 3% cần thử và chỉnh theo tải/sàn; chưa nạp hoặc đo lại độ trôi trên robot. [V26](ROBOT_V26/README_V26.md) và V25 được giữ để đối chiếu/hoàn tác. Repository chỉ lưu nguồn/test/tài liệu theo `.gitignore`; HEX/log ở bản phân phối trên máy.
 
 ---
 
