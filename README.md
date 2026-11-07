@@ -1,14 +1,14 @@
 # Robot_mini_2026
 
-**Phiên bản hiện tại: [V26.2](ROBOT_V26_2/README_V26_2.md).**
+**Phiên bản hiện tại: [V26.3](ROBOT_V26_3/README_V26_3.md).**
 
-- R1 lần đầu bật hút; thả rồi bấm lần hai tắt hút và kích van D40 active-HIGH trong 1 giây. Bật hút lại đóng van ngay; R3/mất PS3 hủy xả.
-- Phanh thường tăng nhẹ lên PWM85 → 170 trong 120 ms, không đảo chiều motor. Phanh R3/mất PS3 vẫn PWM255.
-- Giữ điều khiển V26.1: D-pad lên/xuống giữ nâng/hạ, trái/phải trượt; vuông/X tự tới hành trình, xoay 70%, bù tiến ban đầu 3% khi đi ngang. HWT901B UART/PID không đổi.
+- R1 lần hai tắt hút và kích van D40 trong **500 ms (0,5 giây)**, giảm từ 1 giây của V26.2. Bật hút lại đóng van; R3/mất PS3 hủy xả.
+- Tiến/lùi giữ **PWM255 — 100%**, đã là mức tối đa. PID vẫn chỉnh từng bánh khi cần giữ hướng; chưa đo vận tốc thật.
+- Giữ xoay 70%, D-pad nâng/hạ và trượt, vuông/X tự tới hành trình, bù ngang 3% và phanh 85 → 170/120 ms.
 
-[Sketch Mega V26.2](ROBOT_V26_2/MEGA_PS3_UART_V26_2/MEGA_PS3_UART_V26_2.ino) · [Hướng dẫn](ROBOT_V26_2/HUONG_DAN_HWT901B.md) · [Báo cáo kiểm thử](ROBOT_V26_2/KET_QUA_V26_2_20261107.md).
+[Sketch Mega V26.3](ROBOT_V26_3/MEGA_PS3_UART_V26_3/MEGA_PS3_UART_V26_3.ino) · [Hướng dẫn](ROBOT_V26_3/HUONG_DAN_HWT901B.md) · [Báo cáo kiểm thử](ROBOT_V26_3/KET_QUA_V26_3_20261107.md).
 
-Kiểm chứng: 84/84 nhóm giả lập PASS, Mega 2560 compile PASS. Chưa nạp/thử relay hoặc đo dòng/nhiệt phanh trên robot. [V26.1](ROBOT_V26_1/README_V26_1.md), [V26](ROBOT_V26/README_V26.md) và V25 được giữ để hoàn tác. GitHub lưu nguồn/test/tài liệu theo `.gitignore`; HEX/log ở bản phân phối trên máy.
+Kiểm chứng: 84/84 nhóm giả lập PASS, Mega 2560 compile PASS. Chưa nạp/thử phần cứng; cần xác nhận 500 ms đủ xả van thật. [V26.2](ROBOT_V26_2/README_V26_2.md), [V26.1](ROBOT_V26_1/README_V26_1.md), [V26](ROBOT_V26/README_V26.md) và V25 được giữ để hoàn tác. GitHub chỉ lưu nguồn/test/tài liệu theo `.gitignore`; HEX/log ở bản phân phối trên máy.
 
 ---
 
